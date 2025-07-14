@@ -13,7 +13,7 @@ module.exports = function (config) {
       output: 'minimal'
     },
 
-    reporters: ['mocha'],
+    // reporters: ['mocha'],
 
     // list of files / patterns to load in the browser
     files: [

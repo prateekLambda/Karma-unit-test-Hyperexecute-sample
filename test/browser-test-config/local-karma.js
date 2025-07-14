@@ -6,6 +6,8 @@ module.exports = function (config) {
 
   config.set(Object.assign(baseConfig, {
     browsers: ['FirefoxHeadless'],
+    logLevel: config.LOG_DEBUG,
+
 
     client: {
       captureConsole: true,

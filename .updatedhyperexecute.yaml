@@ -1,0 +1,173 @@
+accessibilityJob: false
+alwaysRunPostSteps: false
+appium: null
+autosplit: true
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+cacheDirectories:
+    - node_modules
+cacheKey: '{{ checksum "package-lock.json" }}'
+captureScreenRecordingForScenarios: false
+codeDirectory: mathjs
+collectLocalGitData: true
+combineTasksInMatrixMode: false
+concurrency: 1
+cypress: false
+differentialUpload:
+    enabled: false
+    forcedDisabled: false
+    ttlHours: null
+dynamicAllocation: false
+errorCategorizedOnFailureOnly: false
+framework:
+    additional_args: null
+    args:
+        appId: ""
+        appPath: ""
+        artifacts: false
+        avoidAppLaunch: false
+        customData: {}
+        darkMode: false
+        deviceSelectionStrategy: ""
+        devices: []
+        disableReleaseDevice: false
+        filters:
+            attributes: []
+        fixedIP: ""
+        isRealMobile: null
+        isVirtualDevice: false
+        language: ""
+        locale: ""
+        minorOsVersion: false
+        mitmProxy: false
+        mobileDC: null
+        networkHar: false
+        otherApps: []
+        platformName: ""
+        playwrightRD: false
+        preservedDevice: false
+        queueTimeout: 0
+        resignApp: true
+        shards:
+            mappings: []
+        skipInstall: false
+        skipUninstallPreviousBuild: false
+        skipXMLOnRun: false
+        smartUI: null
+        testSuiteAppId: ""
+        testSuitePath: ""
+        uninstallPreviousBuild: false
+        xcTestPlanId: ""
+        xcTestPlanPath: ""
+    baseCommand: ""
+    defaultReports: false
+    discoveryFlags: []
+    discoveryMode: ""
+    discoveryType: ""
+    downloadURL: ""
+    flags: []
+    isTestNGXMLSuite: false
+    licenseKey: ""
+    name: ""
+    runnerFlags: []
+    toscaArgs: null
+    userdefinediscovery: false
+    version: ""
+    workingDirectory: ""
+globalPost:
+    commands: []
+    completed: false
+    mode: ""
+    runson: ""
+    shell: ""
+    workingDirectory: ""
+globalPre:
+    cache: false
+    commands: []
+    completed: false
+    location: ""
+    maxRetries: 0
+    mode: ""
+    runson: ""
+    shell: ""
+    type: ""
+    workingDirectory: ""
+    yamlPath: null
+jobID: f1db9378-d19a-4ecc-93f9-ccb46f4fd44f
+key: '********'
+localHTTPProxy: ""
+ltOptions: {}
+maxRetriesPreSteps: 0
+meta: {}
+platformConfig: null
+postDirectives:
+    commands: []
+    shell: ""
+    workingDirectory: ""
+pre:
+    - npm install
+    - npm install karma -g
+    - npm install -g karma-jasmine
+    - npm install karma-webdriver-launcher -g
+    - npm i karma-mocha -g
+    - npm i karma-webpack -g
+    - npm i mocha -g
+    - npm install karma-mocha-reporter -g
+    - npm install karma-mocha-reporter -g
+    - npm install karma-spec-reporter -g
+preDirectives:
+    commands:
+        - npm install
+        - npm install karma -g
+        - npm install -g karma-jasmine
+        - npm install karma-webdriver-launcher -g
+        - npm i karma-mocha -g
+        - npm i karma-webpack -g
+        - npm i mocha -g
+        - npm install karma-mocha-reporter -g
+        - npm install karma-mocha-reporter -g
+        - npm install karma-spec-reporter -g
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+project:
+    id: 01JZ09Q8QRV42A1J0ZN2YDE6CQ
+    name: LambdaTest Default Project
+    type: custom
+projectpath: ""
+regionConfig:
+    storage:
+        enabled: false
+        name: ""
+        platform: azure
+        region: ""
+    vm: []
+runson: win
+runtime:
+    language: node
+    version: 20.19.2
+    addons: []
+    opts: {}
+scenarioCommandStatusOnly: true
+slackChannel: ""
+sourcePayload:
+    verifySSL: true
+sprofilePath: ""
+storageType: ""
+testDiscovery:
+    autosubset: true
+    command: grep -nri 'describe' test/unit-tests -ir | sed 's/:.*//'
+    mode: dynamic
+    type: raw
+testDiscoveryResultV3: []
+testRunnerCommand: karma start test/browser-test-config/lambdatest-karma.config.js --spec=$test
+testSuites: []
+triggerMode: false
+triggerSource: CLI
+tunnelOpts:
+    testsPerTunnel: 10
+unzipPayload: false
+user: prateeks
+version: "0.1"
+waitForArtefactsUpload: false
+whiteLabelProductTag: ""

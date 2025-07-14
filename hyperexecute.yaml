@@ -1,20 +1,29 @@
 ---
 version: 0.1
 runson: win  # defines the OS to test on
-
+joblabel: [unit Test, karma]
 concurrency: 1  # number of machines to execute the testcases
 autosplit: true
-
+scenarioCommandStatusOnly: true
+runtime:
+  - language: node
+    version: "20.19.2"
 # pre steps sets up the environment for testing
 pre:
   - npm install
-  - npm install karma -g 
+  - npm install karma -g  
   - npm install -g karma-jasmine
-  - npm install karma-safari-launcher -g
+  # - npm install karma-safari-launcher -g
   - npm install karma-webdriver-launcher -g
+  # - npm install karma-chrome-launcher -g
   - npm i karma-mocha -g
   - npm i karma-webpack -g
-  - npm i mocha -g
+  - npm i mocha -g  
+  # - npm install karma-firefox-launcher -g
+  - npm install karma-mocha-reporter -g
+  - npm install karma-mocha-reporter -g
+  - npm install karma-spec-reporter -g
+
 
 
 # Smart cache
@@ -26,7 +35,7 @@ cacheDirectories:
 testDiscovery:
   type: raw
   mode: dynamic
-  command: grep -nri 'describe' test/unit-tests -ir --include=*.test.js | sed 's/:.*//'
+  command: grep -nri 'describe' test/unit-tests -ir | sed 's/:.*//'
 
 # command to execute the test cases
-testRunnerCommand: karma start test/browser-test-config/lt_karma.js --spec= $test
+testRunnerCommand: karma start test/browser-test-config/lambdatest-karma.config.js --spec=$test
